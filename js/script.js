@@ -11,6 +11,7 @@ function agregarContacto(){
   let edad = document.getElementById("txtEdad").value;
   let telefono= document.getElementById("txtTelefono").value;
   agenda.agregar(new Contacto(nombre,apellido,edad,telefono));
+  document.getElementById("formulario").reset();
   
   
 }
