@@ -11,6 +11,12 @@ function consultar(){
     lista.innerHTML = ""; 
     let datos = agenda.darTodos();
     //console.log(datos);
+    for (elemento of datos ){
+        let x = document.createElement("li");
+        let nodo = document.createTextNode(elemento);
+        x.appendChild(nodo);
+        lista.appendChild(x);
+    }
 }
 function agregarContacto(){
   let nombre = document.getElementById("txtNombre").value;
