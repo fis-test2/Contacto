@@ -1,4 +1,14 @@
 
+window.addEventListener("load",inicio);
+
+function inicio(){
+   document.getElementById("boton").addEventListener("click",agregarContacto);
+}
+
+function agregarContacto(){
+  nombreIngresado = document.getElementById("txtNombre").value;
+  console.log(nombreIngresado);
+}
 
 class Contacto {
   constructor (_nombre, _apellido, _edad, _telefono){
@@ -20,8 +30,10 @@ class Agenda {
       this.lista.push(unContacto);
     }
     darTodos(){
-      return this.lista;
+      return "hola";
     }
 
   }
+
+let agenda = new Agenda();
 
