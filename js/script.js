@@ -6,8 +6,13 @@ function inicio(){
 }
 
 function agregarContacto(){
-  nombreIngresado = document.getElementById("txtNombre").value;
-  console.log(nombreIngresado);
+  let nombre = document.getElementById("txtNombre").value;
+  let apellido = document.getElementById("txtApellido").value;
+  let edad = document.getElementById("txtEdad").value;
+  let telefono= document.getElementById("txtTelefono").value;
+  agenda.agregar(new Contacto(nombre,apellido,edad,telefono));
+  
+  
 }
 
 class Contacto {
@@ -28,6 +33,7 @@ class Agenda {
     }
     agregar(unContacto){
       this.lista.push(unContacto);
+      console.log('Agregado' + unContacto);
     }
     darTodos(){
       return "hola";
