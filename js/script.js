@@ -3,8 +3,15 @@ window.addEventListener("load",inicio);
 
 function inicio(){
    document.getElementById("boton").addEventListener("click",agregarContacto);
+    document.getElementById("botonConsultar").addEventListener("click",consultar);
 }
 
+function consultar(){
+    let lista = document.getElementById("lista");
+    lista.innerHTML = ""; 
+    let datos = agenda.darTodos();
+    //console.log(datos);
+}
 function agregarContacto(){
   let nombre = document.getElementById("txtNombre").value;
   let apellido = document.getElementById("txtApellido").value;
@@ -37,7 +44,7 @@ class Agenda {
       console.log('Agregado' + unContacto);
     }
     darTodos(){
-      return "hola";
+      return this.lista;
     }
 
   }
